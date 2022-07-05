@@ -1,11 +1,11 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Denilson Novais dos Santos
+- Maiara Cruz Ferreira dos Santos
+- Victor Ramon Firmo Moreira
 
-Link do Surge: www.link.com.br
+Link do Surge: <link do surge>
 
 O que funciona:
 - Item 1

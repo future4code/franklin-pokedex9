@@ -1,9 +1,16 @@
+import { HomePage } from "./pages/HomePage/HomePage";
+import { PokeDexDetails } from "./pages/PokedexDetails/PokedexDetails";
+import { PokedexPage } from "./pages/PokedexPage/PokedexPage";
 
 
 function App() {
   return (
     <div >
-      <h1>Pokedex</h1>
+      <HomePage/>
+      <hr />
+      <PokedexPage/>
+      <hr />
+      <PokeDexDetails/>
     </div>
   );
 }

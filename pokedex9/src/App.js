@@ -1,7 +1,8 @@
-import { HomePage } from "./pages/HomePage/HomePage";
-import { PokeDexDetails } from "./pages/PokedexDetails/PokedexDetails";
-import { PokedexPage } from "./pages/PokedexPage/PokedexPage";
-import { getPokemonDetails, getPokemons } from "./services/requests";
+import Router from "./rotas/Rotas";
+// import { HomePage } from "./pages/HomePage/HomePage";
+// import { PokeDexDetails } from "./pages/PokedexDetails/PokedexDetails";
+// import { PokedexPage } from "./pages/PokedexPage/PokedexPage";
+// import { getPokemonDetails, getPokemons } from "./services/requests";
 
 function App() {
 
@@ -9,8 +10,8 @@ function App() {
 
   return (
     <div >
-
-      <HomePage/>
+      <Router/>
+      {/* <HomePage/>
       <hr />
       <PokedexPage/>
       <hr />
@@ -18,7 +19,7 @@ function App() {
       
       <h1>Pokedex Requisições</h1>
       <button onClick={getPokemons}>getPokemons</button>
-      <button onClick={() => {getPokemonDetails(id)}}>getPokemonDetails</button>
+      <button onClick={() => {getPokemonDetails(id)}}>getPokemonDetails</button> */}
 
     </div>
   );

@@ -1,3 +1,6 @@
+import { HomePage } from "./pages/HomePage/HomePage";
+import { PokeDexDetails } from "./pages/PokedexDetails/PokedexDetails";
+import { PokedexPage } from "./pages/PokedexPage/PokedexPage";
 import { getPokemonDetails, getPokemons } from "./services/requests";
 
 function App() {
@@ -6,9 +9,17 @@ function App() {
 
   return (
     <div >
-      <h1>Pokedex</h1>
+
+      <HomePage/>
+      <hr />
+      <PokedexPage/>
+      <hr />
+      <PokeDexDetails/>
+      
+      <h1>Pokedex Requisições</h1>
       <button onClick={getPokemons}>getPokemons</button>
       <button onClick={() => {getPokemonDetails(id)}}>getPokemonDetails</button>
+
     </div>
   );
 }

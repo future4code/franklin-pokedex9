@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import { goToBackPage } from '../../rotas/coordenadas';
 import { goToPokedexDetails } from '../../rotas/coordenadas';
+import { Header } from '../../components/Header/Header';
+import { StyleTitlePage } from './styled';
 
 export const PokedexPage = () => {
 
@@ -8,15 +9,14 @@ export const PokedexPage = () => {
 
     return(
         <div>
-            {/* Componente Header */}
-            <header>
-                <button onClick={() => goToBackPage(navigate)}>Voltar para lista de pokemons</button>
-                <h1>Pokedex</h1>
-            </header>
+            <Header
+             disableButtonBack={false}
+            />
 
             {/* Componente CardPokemon */}
-            <div> <p>POKE CARD</p>
-                <button>Adicionar a Pokedex</button>
+            <div> 
+                <StyleTitlePage>Minha Pokedex</StyleTitlePage>
+                <button>Remover</button>
                 <button onClick={() => goToPokedexDetails(navigate)}>Ver detalhes</button>
             </div>
         </div>

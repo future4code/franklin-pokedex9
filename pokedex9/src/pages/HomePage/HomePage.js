@@ -1,21 +1,18 @@
-import { useNavigate } from 'react-router-dom';
 import { CardPokemon } from '../../components/CardPokemon/CardPokemon';
-import { goToPokedex } from '../../rotas/coordenadas';
+import { Header } from '../../components/Header/Header';
+import { StyleTitlePage } from './styled';
+
 
 export const HomePage = () => {
 
-    const navigate = useNavigate()
-
     return(
         <div>
-            {/* Componente Header */}
-            <header>
-                <button onClick={() => goToPokedex(navigate)}>Ver minha Pokedex</button>
-                <h1>Lista de Pokémons</h1>
-            </header>
-
-            <CardPokemon/>
-            
+            <Header
+             disableButtonBack={true}
+            >
+            </Header>
+            <StyleTitlePage>Lista de Pokemons</StyleTitlePage>
+            <CardPokemon/>    
         </div>
     )
 } 

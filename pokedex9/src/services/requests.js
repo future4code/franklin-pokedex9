@@ -16,8 +16,8 @@ export const getPokemons = () => {
 }
 
 // Retorna um array de objetos com o status do pokemon com base no id solicitado
-export const getPokemonDetails = (id) => {
-    axios.get(`${BASE_URL}pokemon/${id}`)
+export const getPokemonDetails = (name) => {
+    axios.get(`${BASE_URL}pokemon/${name}`)
         .then((response) => {
             // console.log(`Dados Detalhes: `)
             // console.log(response.data.stats)

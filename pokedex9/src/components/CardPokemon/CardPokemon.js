@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { BASE_URL } from "../../constants/urls";
 import { goToPokedexDetails } from "../../rotas/coordenadas";
+import { StyleDiv, StyleTitleCard, StyleImage, StyleDivButtonsElements, StyleButtonYellow, StyleButtonBlue, StyleListCards } from './styled';
 
 const CardPokemon = () => {
     const navigate = useNavigate();
@@ -27,18 +28,17 @@ const CardPokemon = () => {
     const renderPersonagens = () => {
         return pokemon.map(poke => {
             return (
-                <div>
+                    <StyleDiv>
                     <div key={poke.name}>
-                        <p><strong>{poke.name}</strong></p>
+                        <StyleTitleCard>{poke.name}</StyleTitleCard>
                         {/* Precisa de outra requisição pra pegar a imagem */}
-                        <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'/>
+                        <StyleImage src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'/>
                     </div>
-                    <div>
-                        <button onClick={() => goToPokedexDetails(navigate)}>Ver Detalhes</button>
-                        <button>Adicionar a Pokedex</button>
-                    </div>
-                </div>
-               
+                    <StyleDivButtonsElements>
+                        <StyleButtonBlue>Adicionar</StyleButtonBlue>
+                        <StyleButtonYellow onClick={() => goToPokedexDetails(navigate)}>Detalhes</StyleButtonYellow>   
+                    </StyleDivButtonsElements>
+                    </StyleDiv>
             );
 
         }
@@ -46,9 +46,9 @@ const CardPokemon = () => {
     }
 
     return (
-        <div>
+        <StyleListCards>
             {renderPersonagens()}
-        </div>
+        </StyleListCards>
     )
 }
 

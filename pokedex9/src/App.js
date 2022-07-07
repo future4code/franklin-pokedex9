@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Router from "./rotas/Rotas";
 import { getPokemonImages } from "./services/requests";
+import './App.css';
 
 function App() {
 

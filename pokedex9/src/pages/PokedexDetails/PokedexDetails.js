@@ -1,21 +1,16 @@
-import { useNavigate } from 'react-router-dom';
-import { goToPokedex } from '../../rotas/coordenadas';
-import { goToBackPage } from '../../rotas/coordenadas';
+import { Header } from '../../components/Header/Header';
+import { StyleTitlePage } from '../PokedexPage/styled';
 
 export const PokeDexDetails = () => {
 
-    const navigate = useNavigate()
-
     return (
         <div>
-            {/* Componente Header */}
-            <header>
-                <button onClick={() => goToBackPage(navigate)}>Voltar</button>
-                <h1>Nome do Pokémon</h1>
-                <button onClick={() => goToPokedex(navigate)}>Ir para Pokedex</button>
-            </header>
+            <Header
+             disableButtonBack={false}
+            />
 
             {/* Componente Card DetalhesPokemon */}
+            <StyleTitlePage>Nome do Pokemon</StyleTitlePage>
             <div>
                 <img src="#" alt="Imagem Frontal" />
                 <img src="#" alt="Imagem de costas" />

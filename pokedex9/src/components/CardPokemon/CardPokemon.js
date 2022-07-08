@@ -1,5 +1,4 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { BASE_URL } from "../../constants/urls";
 import { useRequestData } from '../../hooks/useRequestData';
@@ -14,7 +13,6 @@ const CardPokemon = () => {
     console.log('request:');
     console.log(pokemons);
 
-    const listaDePokemons = 0
 
     return (
         <StyleListCards>
@@ -31,7 +29,7 @@ const CardPokemon = () => {
                             </div>
                             <StyleDivButtonsElements>
                                 <StyleButtonBlue>Adicionar</StyleButtonBlue>
-                                <StyleButtonYellow onClick={() => goToPokedexDetails(navigate)}>Detalhes</StyleButtonYellow>
+                                <StyleButtonYellow onClick={() => goToPokedexDetails(navigate, index)}>Detalhes</StyleButtonYellow>
                             </StyleDivButtonsElements>
                         </StyleDiv>
                     );

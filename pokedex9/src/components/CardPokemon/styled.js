@@ -4,7 +4,7 @@ import { blueColor, yellowColor, whiteColor } from '../../constants/cores'
 export const StyleDiv = styled.div`
     display: flex;
     height: auto;
-    min-height: 400px;
+    min-height: 350px;
     width: 340px;
     border-radius: 55px;
     background-color: ${whiteColor};
@@ -27,8 +27,10 @@ export const StyleTitleCard = styled.p`
 `
 
 export const StyleImage = styled.img`
-    width: 180px;
-    height: 180px;
+    width: 130px;
+    height: 130px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 `
 
 export const StyleButtonYellow = styled.button`
@@ -59,7 +61,9 @@ export const StyleListCards = styled.div`
     flex-wrap: wrap;
     flex-direction: row;
     gap: 60px;
-    justify-content: center;
-    margin: 60px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    max-width: 1200px;
 `
 

@@ -7,4 +7,5 @@ export const StyleTitlePage = styled.h2`
     text-align: center;
     color: ${blueColor};
     margin-top: 40px;
+    margin-bottom: 40px;
 `

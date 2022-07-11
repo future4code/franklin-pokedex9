@@ -10,10 +10,6 @@ const CardPokemon = () => {
 
     const [pokemons, error, isLoading] = useRequestData(`${BASE_URL}`);
 
-    console.log('request:');
-    console.log(pokemons);
-
-
     return (
         <StyleListCards>
             {isLoading && <p>Carregando...</p>}

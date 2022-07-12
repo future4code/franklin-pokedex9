@@ -1,4 +1,3 @@
-import React from "react";
 import styled from 'styled-components';
 import { whiteColor, blueColor } from "../../constants/cores";
 
@@ -6,7 +5,7 @@ export const StyleDiv = styled.div`
     display: flex;
     height: auto;
     min-height: 200px;
-    width: 340px;
+    width: 320px;
     border-radius: 55px;
     background-color: ${whiteColor};
     align-items: center;
@@ -20,7 +19,7 @@ export const StyleDivAttack = styled.div`
     display: flex;
     height: auto;
     min-height: 250px;
-    width: 340px;
+    width: 320px;
     border-radius: 55px;
     background-color: ${whiteColor};
     align-items: center;

@@ -5,7 +5,7 @@ export const StyleDiv = styled.div`
     display: flex;
     height: auto;
     min-height: 350px;
-    width: 340px;
+    width: 300px;
     border-radius: 55px;
     background-color: ${whiteColor};
     align-items: center;

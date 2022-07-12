@@ -13,6 +13,7 @@ export const StyleDiv = styled.div`
     flex-direction: column;
     padding-bottom: 20px;
     border: 1px solid #000;
+    margin-bottom: 30px;
 `
 export const StyleTitlePage = styled.h2`
     font-size: 28px;

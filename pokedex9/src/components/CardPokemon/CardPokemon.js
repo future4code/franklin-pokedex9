@@ -11,9 +11,6 @@ const CardPokemon = () => {
 
     const [pokemons, error, isLoading] = useRequestData(`${BASE_URL}`);
 
-    console.log('request:');
-    console.log(pokemons);
-
     const poke = useContext(ContextPokemon);
 
     return (
@@ -37,10 +34,12 @@ const CardPokemon = () => {
                     );
                 }
                 )}
-            <div>
-                <p>{poke.nome}</p>
-                <img src={poke.imagem} alt="" />
-            </div>
+
+                <div>
+                    <p>{poke.nome}</p>
+                    <img src={poke.imagem} alt="" />
+                </div>
+
         </StyleListCards>
     )
 }

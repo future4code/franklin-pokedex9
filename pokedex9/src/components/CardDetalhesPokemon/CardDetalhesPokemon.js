@@ -3,9 +3,10 @@ import { DetalhesContainer, StyleTitlePage } from "./styled";
 
 
 const CardDetalhesPokemon = (props) => {
-         
-    return(
+
+    return (
         <div>
+
             <StyleTitlePage>{props.titulo}</StyleTitlePage>
 
             <DetalhesContainer>
@@ -29,10 +30,11 @@ const CardDetalhesPokemon = (props) => {
                     <h2>Principais Ataques</h2>
                     <p>{props.principaisAtaques}</p>
 
+
                 </div>
             </DetalhesContainer>
         </div>
-    )        
+    )
 }
 
 export { CardDetalhesPokemon }

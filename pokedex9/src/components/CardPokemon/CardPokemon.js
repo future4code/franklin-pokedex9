@@ -24,7 +24,7 @@ const CardPokemon = () => {
                             <div key={pokemon.name}>
                                 <StyleTitleCard>{pokemon.name}</StyleTitleCard>
                                 {/* <StyleImage src= {`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1}.png`} /> */}
-                                <StyleImage src= {`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${index + 1}.gif`} />
+                                <StyleImage src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${index + 1}.gif`} />
                             </div>
                             <StyleDivButtonsElements>
                                 <StyleButtonBlue>Adicionar</StyleButtonBlue>
@@ -34,10 +34,12 @@ const CardPokemon = () => {
                     );
                 }
                 )}
+
                 <div>
                     <p>{poke.nome}</p>
                     <img src={poke.imagem} alt="" />
                 </div>
+
         </StyleListCards>
     )
 }

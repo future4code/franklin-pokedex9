@@ -2,17 +2,13 @@ import { CardPokemon } from '../../components/CardPokemon/CardPokemon';
 import { Header } from '../../components/Header/Header';
 import { StyleTitlePage } from './styled';
 
-
 export const HomePage = () => {
 
-    return(
+    return (
         <div>
-            <Header
-             disableButtonBack={true}
-            >
-            </Header>
+            <Header disableButtonBack={true} />
             <StyleTitlePage>Lista de Pokemons</StyleTitlePage>
-            <CardPokemon/>    
+            <CardPokemon />
         </div>
     )
 } 

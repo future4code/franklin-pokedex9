@@ -7,7 +7,7 @@ export const useRequestData = (url) => {
     const [data, setData] = useState(undefined)
     const [error, setError] = useState("")
     const [isLoading, setIsLoading] = useState(false)
-    
+
     const getData = () => {
         setIsLoading(true)
         axios.get(url)

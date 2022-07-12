@@ -8,8 +8,7 @@ export const StyleMenu = styled.div`
   background-color: ${blueColor};
   align-items: center;    
   display: flex;
-  justify-content: space-between;
- 
+  justify-content: space-between; 
 `
 
 export const StyleLogo = styled.h1`

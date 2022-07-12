@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { blueColor, redColor, whiteColor } from '../../constants/cores'
 
 export const StyleMenu = styled.div`
-  width: 100%
+  width: auto;
   height: 100px;
   padding: 25px;
   background-color: ${blueColor};

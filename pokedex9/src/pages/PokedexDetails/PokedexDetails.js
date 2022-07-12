@@ -3,6 +3,10 @@ import { Header } from '../../components/Header/Header';
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react"
+import CardImageFront from "../../components/CardImageFront/CardImageFront";
+import CardImageBack from "../../components/CardImageBack/CardImageBack";
+import CardPowerAndAttack from "../../components/CardPowerAndAttack/CardPowerAndAttack";
+import { StyleDivImages, StyleDivContainer, StyleTitlePage} from "./styled";
 
 export const PokeDexDetails = () => {
 
@@ -36,42 +40,48 @@ export const PokeDexDetails = () => {
         })
 
     }, [id])
-
     
     return (
-        <div>
+         <div>
             <Header
-             disableButtonBack={false}
+                disableButtonBack={false}
             />
-            
-            <CardDetalhesPokemon
-                titulo={pokemonName}
-                imagemFront={pokemonsImg.front_default}
-                imagemBack={pokemonsImg.back_default}
-                poderes={pokemons.map((pokemon) => { 
-                    return (
-                        <div key={pokemon.stat.id}> 
-                            <p><strong>{pokemon.stat.name}: </strong>{pokemon.base_stat}</p>
-                        </div>
+            <StyleTitlePage>{pokemonName}</StyleTitlePage>
+            <StyleDivContainer>
+                <StyleDivImages>
+                    <CardImageFront
+                    imagemFront={pokemonsImg.front_default}
+                    />
+                    <CardImageBack
+                    imagemBack={pokemonsImg.back_default}
+                    />
+                </StyleDivImages>
+                    <CardDetalhesPokemon                
+                    poderes={pokemons.map((pokemon) => { 
+                        return (
+                            <div key={pokemon.stat.id}> 
+                                <p><strong>{pokemon.stat.name}: </strong>{pokemon.base_stat}</p>
+                            </div>
                     )
-                })}
-                tiposPoderes={pokemonsAbilites.map((typos) => { 
-                    return (
-                        <div key={typos.slot}> 
-                            <p>{typos.type.name}</p>
-                        </div>
+                    })}
+                    />
+                    <CardPowerAndAttack
+                        tiposPoderes={pokemonsAbilites.map((typos) => { 
+                            return (
+                                <div key={typos.slot}> 
+                                    <p>{typos.type.name}</p>
+                                </div>
                     )
-                })}
-                principaisAtaques={pokemonMoves.map((move, index) => { 
-                    return (
+                    })}
+                        principaisAtaques={pokemonMoves.map((move, index) => { 
+                            return (
 
-                        index < 5 && <p key={move.move.name}>{move.move.name}</p>
+                            index < 5 && <p key={move.move.name}>{move.move.name}</p>
 
                     )
-                })}
-          
-
-            />
-        </div >
+                    })}
+            /> 
+                </StyleDivContainer>
+            </div>
     )
 } 

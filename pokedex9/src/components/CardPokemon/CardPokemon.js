@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { BASE_URL } from "../../constants/urls";
+import { ContextPokemon } from '../../context/ContextPokemon';
 import { useRequestData } from '../../hooks/useRequestData';
 import { goToPokedexDetails } from "../../rotas/coordenadas";
 import { StyleDiv, StyleTitleCard, StyleImage, StyleDivButtonsElements, StyleButtonYellow, StyleButtonBlue, StyleListCards } from './styled';
@@ -10,9 +11,7 @@ const CardPokemon = () => {
 
     const [pokemons, error, isLoading] = useRequestData(`${BASE_URL}`);
 
-    console.log('request:');
-    console.log(pokemons);
-
+    const poke = useContext(ContextPokemon);
 
     return (
         <StyleListCards>
@@ -35,6 +34,10 @@ const CardPokemon = () => {
                     );
                 }
                 )}
+                <div>
+                    <p>{poke.nome}</p>
+                    <img src={poke.imagem} alt="" />
+                </div>
         </StyleListCards>
     )
 }

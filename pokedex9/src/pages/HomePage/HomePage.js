@@ -1,4 +1,4 @@
-import { CardPokemon } from '../../components/CardPokemon/CardPokemon';
+import { CardPokemons } from '../../components/CardPokemons/CardPokemons';
 import { Header } from '../../components/Header/Header';
 import { StyleTitlePage } from './styled';
 
@@ -8,7 +8,7 @@ export const HomePage = () => {
         <div>
             <Header disableButtonBack={true} />
             <StyleTitlePage>Lista de Pokemons</StyleTitlePage>
-            <CardPokemon />
+            <CardPokemons />
         </div>
     )
-} 
+}

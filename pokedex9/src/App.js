@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import Router from "./rotas/Rotas";
 import { getPokemonImages } from "./services/requests";
-import { ContextPokemon } from "./context/ContextPokemon";
+// import { ContextPokemon } from "./context/ContextPokemon";
 import './App.css';
+import { GlobalState } from "./context/global/GlobalState";
 
 function App() {
 
@@ -11,17 +12,11 @@ function App() {
 
   useEffect(() => {getPokemonImages(id)}, [])
 
-
-  const poke = {
-    nome: "bulbassaur",
-    imagem: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/1.gif",
-  }
-
   return (
     <div >
-      <ContextPokemon.Provider value={poke}>
+      <GlobalState>
         <Router />
-      </ContextPokemon.Provider>
+      </GlobalState>
     </div>
   );
 }

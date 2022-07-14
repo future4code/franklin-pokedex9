@@ -1,9 +1,7 @@
 import { useState } from "react";
-import { BASE_URL } from "../../constants/urls";
-import { useRequestData } from "../../hooks/useRequestData";
 import { GlobalStateContext } from "./GlobalStateContext";
 
-export const GlobalState = ({ children }) => {
+export const GlobalState = (props) => {
 
     const [pokedex, setPokedex] = useState([]);
 
@@ -14,7 +12,7 @@ export const GlobalState = ({ children }) => {
     return (
         <>
             <GlobalStateContext.Provider value={{ state, setters, request }}>
-                {children}
+                {props.children}
             </GlobalStateContext.Provider>
         </>
     )

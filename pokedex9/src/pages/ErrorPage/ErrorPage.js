@@ -1,12 +1,13 @@
+import React from "react";
+import { Header } from "../../components/Header/Header";
+import { StyleTitle } from "./styled";
 
 export const ErrorPage = () => {
 
     return(
         <div>
-            {/* Componente Header */}
-            <header>
-                <h1>Ops. Essa página não existe</h1>
-            </header>
+            <Header></Header>
+                <StyleTitle>Ops. Essa página não existe</StyleTitle>
         </div>
     )
 } 

@@ -22,7 +22,6 @@ export const PokeDexDetails = () => {
     const params = useParams()
     const [id, setId] = useState();
 
-    // Não consegui passar o id como parametro da requisição ainda!
     useEffect(() => {
         setIsLoading(true)
         axios

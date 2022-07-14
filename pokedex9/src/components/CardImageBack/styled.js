@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { blueColor, yellowColor, whiteColor } from '../../constants/cores'
+import { whiteColor } from '../../constants/cores'
 
 export const StyleDiv = styled.div`
     display: flex;

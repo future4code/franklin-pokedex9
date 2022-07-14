@@ -28,6 +28,7 @@ export const StyleDivAttack = styled.div`
     padding-bottom: 20px;
     border: 1px solid #000;
     margin-top: 30px;
+    margin-bottom: 30px;
 `
 export const StyleTitlePage = styled.h2`
     font-size: 28px;

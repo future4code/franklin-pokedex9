@@ -33,6 +33,7 @@ export const StyleTitleCard = styled.p`
     font-weight: 700;
     text-align: center;
     color: ${blueColor};
+
 `
 
 export const StyleImage = styled.img`
@@ -74,5 +75,6 @@ export const StyleListCards = styled.div`
     align-items: center;
     margin: auto;
     max-width: 1200px;
+    margin-top: 30px;
 `
 

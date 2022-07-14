@@ -13,12 +13,12 @@ export const StyleMenu = styled.div`
 `
 
 export const StyleLogo = styled.h1`
-color: ${whiteColor};
-background-color: none;
-text-decoration: none;
-font-size: 35px;
-margin-left: 40px;
-cursor: pointer;
+  color: ${whiteColor};
+  background-color: none;
+  text-decoration: none;
+  font-size: 35px;
+  margin-left: 40px;
+  cursor: pointer;
 `
 
 export const StyleButton = styled.button`

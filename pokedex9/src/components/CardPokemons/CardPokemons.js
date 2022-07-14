@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { BASE_URL } from "../../constants/urls";
-import { ContextPokemon } from '../../context/ContextPokemon';
 import { GlobalStateContext } from '../../context/global/GlobalStateContext';
 import { useRequestData } from '../../hooks/useRequestData';
 import { goToPokedexDetails } from "../../rotas/coordenadas";
@@ -21,7 +20,6 @@ const CardPokemons = () => {
     const addPokemonToPokedex = (newPokemon) => {
         const found = Boolean(pokedex.find(pokemon => pokemon.name === newPokemon.name))
         const newPokedex = [...pokedex]
-        console.log(newPokedex);
 
         if (!found) {
             newPokedex.push(newPokemon)
@@ -29,10 +27,6 @@ const CardPokemons = () => {
 
         setPokedex(newPokedex)
 
-        console.log(`Pokemon para adicionar: ${newPokemon}`);
-        console.log(`Pesquisa no array: ${found}`);
-        console.log(pokedex);
-        console.log(newPokedex);
     }
 
     const renderedPokemons = pokemons && pokemons.map((pokemon, index) => {

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { BASE_URL } from "../../constants/urls";
 import { ContextPokemon } from '../../context/ContextPokemon';
@@ -16,24 +16,38 @@ const CardPokemons = () => {
 
     const [pokemons] = useRequestData(`${BASE_URL}`);
 
-    const addPokemonToPokedex = (newPokemon) => {
+    useEffect(() => {}, pokedex)
 
-        console.log(newPokemon);
+    const addPokemonToPokedex = (newPokemon) => {
+        const found = Boolean(pokedex.find(pokemon => pokemon.name === newPokemon.name))
+        const newPokedex = [...pokedex]
+        console.log(newPokedex);
+
+        if (!found) {
+            newPokedex.push(newPokemon)
+        }
+
+        setPokedex(newPokedex)
+
+        console.log(`Pokemon para adicionar: ${newPokemon}`);
+        console.log(`Pesquisa no array: ${found}`);
         console.log(pokedex);
+        console.log(newPokedex);
     }
 
     const renderedPokemons = pokemons && pokemons.map((pokemon, index) => {
+
+        const pokemonUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${index + 1}.gif`
+
         return (
-            // Acredito que teremos que transformar esse card em um componente chamado CardPokemon
             <StyleDiv>
                 <div key={pokemon.name}>
                     <StyleTitleCard>{pokemon.name}</StyleTitleCard>
-                    {/* <StyleImage src= {`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1}.png`} /> */}
-                    <StyleImage src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${index + 1}.gif`} />
+                    <StyleImage src={pokemonUrl} />
                 </div>
                 <StyleDivButtonsElements>
-                    <StyleButtonBlue onClick={() => addPokemonToPokedex(pokemon.name)}>Adicionar</StyleButtonBlue>
-                    <StyleButtonYellow onClick={() => goToPokedexDetails(navigate, index)}>Detalhes</StyleButtonYellow>
+                    <StyleButtonBlue onClick={() => addPokemonToPokedex({ name: pokemon.name, url: pokemonUrl })}>Adicionar</StyleButtonBlue>
+                    <StyleButtonYellow onClick={() => goToPokedexDetails(navigate, pokemon.name)}>Detalhes</StyleButtonYellow>
                 </StyleDivButtonsElements>
             </StyleDiv>
         )

@@ -18,7 +18,7 @@ export const PokedexPage = () => {
     const removePokemonFromPokedex = (pokemonToRemove) => {
         const newPokedex = pokedex.filter(pokemon => pokemon !== pokemonToRemove)
         setPokedex(newPokedex);
-        console.log(newPokedex);
+    
     }
 
     const renderedPokemons = pokedex.map((pokemon, index) => {

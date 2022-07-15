@@ -13,7 +13,7 @@ const CardPokemons = () => {
     const { pokedex } = state;
     const { setPokedex } = setters;
 
-    const [pokemons] = useRequestData(`${BASE_URL}`);
+    const [pokemons] = useRequestData(`${BASE_URL}/?offset=0&limit=400`);
 
     useEffect(() => {}, pokedex)
 

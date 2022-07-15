@@ -5,7 +5,7 @@ import { StyleTitlePage } from './styled';
 import { GlobalStateContext } from '../../context/global/GlobalStateContext';
 import { useContext } from 'react';
 import { StyleDiv, StyleTitleCard, StyleImage, StyleDivButtonsElements, StyleButtonYellow, StyleButtonBlue, StyleListCards } from './styled';
-
+import swal from 'sweetalert'
 
 export const PokedexPage = () => {
 
@@ -18,6 +18,7 @@ export const PokedexPage = () => {
     const removePokemonFromPokedex = (pokemonToRemove) => {
         const newPokedex = pokedex.filter(pokemon => pokemon !== pokemonToRemove)
         setPokedex(newPokedex);
+        swal("Pokemon removido com sucesso!")
     
     }
 

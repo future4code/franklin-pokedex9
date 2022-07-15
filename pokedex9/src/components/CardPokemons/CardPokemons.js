@@ -5,6 +5,7 @@ import { GlobalStateContext } from '../../context/global/GlobalStateContext';
 import { useRequestData } from '../../hooks/useRequestData';
 import { goToPokedexDetails } from "../../rotas/coordenadas";
 import { StyleDiv, StyleTitleCard, StyleImage, StyleDivButtonsElements, StyleButtonYellow, StyleButtonBlue, StyleListCards } from './styled';
+import swal from 'sweetalert';
 
 const CardPokemons = () => {
     const navigate = useNavigate();
@@ -23,10 +24,13 @@ const CardPokemons = () => {
 
         if (!found) {
             newPokedex.push(newPokemon)
+            swal("Pokemon adicionado com sucesso!")
+            setPokedex(newPokedex)
         }
-
-        setPokedex(newPokedex)
-
+        
+        else {
+            swal("Este Pokemon já foi adicionado")
+        }
     }
 
     const renderedPokemons = pokemons && pokemons.map((pokemon, index) => {
